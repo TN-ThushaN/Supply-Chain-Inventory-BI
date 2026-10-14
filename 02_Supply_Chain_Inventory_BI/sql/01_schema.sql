@@ -1,0 +1,6 @@
+CREATE TABLE dim_suppliers (supplier_id TEXT PRIMARY KEY,supplier_name TEXT NOT NULL,region TEXT NOT NULL,contract_lead_days INTEGER NOT NULL);
+CREATE TABLE dim_products (product_id TEXT PRIMARY KEY,product_name TEXT NOT NULL,category TEXT NOT NULL,supplier_id TEXT NOT NULL REFERENCES dim_suppliers(supplier_id),unit_cost REAL NOT NULL,reorder_point INTEGER NOT NULL);
+CREATE TABLE fact_purchase_orders (po_id TEXT PRIMARY KEY,product_id TEXT NOT NULL REFERENCES dim_products(product_id),supplier_id TEXT NOT NULL REFERENCES dim_suppliers(supplier_id),order_date TEXT NOT NULL,expected_date TEXT NOT NULL,received_date TEXT,status TEXT NOT NULL,qty_ordered INTEGER NOT NULL,qty_received INTEGER NOT NULL,unit_cost REAL NOT NULL,actual_lead_days INTEGER,days_late INTEGER);
+CREATE TABLE fact_inventory_weekly (snapshot_id INTEGER PRIMARY KEY,week_start TEXT NOT NULL,month TEXT NOT NULL,product_id TEXT NOT NULL REFERENCES dim_products(product_id),category TEXT NOT NULL,stock_on_hand INTEGER NOT NULL,reorder_point INTEGER NOT NULL,weekly_units_demanded INTEGER NOT NULL,weekly_units_fulfilled INTEGER NOT NULL,inventory_value REAL NOT NULL,below_reorder INTEGER NOT NULL,stockout INTEGER NOT NULL);
+CREATE INDEX inventory_month ON fact_inventory_weekly(month);
+CREATE INDEX po_supplier ON fact_purchase_orders(supplier_id);

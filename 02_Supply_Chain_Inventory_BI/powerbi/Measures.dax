@@ -1,0 +1,11 @@
+-- Add each line as a separate measure, to the named tables.
+Received POs = CALCULATE(COUNTROWS(Fact_Purchase_Orders), Fact_Purchase_Orders[status] = "Received")
+On-Time Received POs = CALCULATE(COUNTROWS(Fact_Purchase_Orders), Fact_Purchase_Orders[status] = "Received", Fact_Purchase_Orders[days_late] = 0)
+On-Time Delivery % = DIVIDE([On-Time Received POs], [Received POs])
+Supplier Fill Rate % = DIVIDE(CALCULATE(SUM(Fact_Purchase_Orders[qty_received]), Fact_Purchase_Orders[status] = "Received"), CALCULATE(SUM(Fact_Purchase_Orders[qty_ordered]), Fact_Purchase_Orders[status] = "Received"))
+Avg Actual Lead Days = CALCULATE(AVERAGE(Fact_Purchase_Orders[actual_lead_days]), Fact_Purchase_Orders[status] = "Received")
+Demand Fill Rate % = DIVIDE(SUM(Fact_Inventory_Weekly[weekly_units_fulfilled]), SUM(Fact_Inventory_Weekly[weekly_units_demanded]))
+Stockout SKU-Weeks = SUM(Fact_Inventory_Weekly[stockout])
+Below-Reorder SKU-Weeks = SUM(Fact_Inventory_Weekly[below_reorder])
+-- For a selected week, snapshot values are additive across SKUs.
+Inventory Value (Selected Week) = SUM(Fact_Inventory_Weekly[inventory_value])

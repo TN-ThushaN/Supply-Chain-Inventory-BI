@@ -1,0 +1,46 @@
+﻿product_id,product_name,category,supplier_id,unit_cost,reorder_point
+SKU001,Office Supplies Item 01,Office Supplies,S08,1907.24,100
+SKU002,Electronics Item 02,Electronics,S07,3041.74,40
+SKU003,Packaging Item 03,Packaging,S03,4022.67,80
+SKU004,Personal Care Item 04,Personal Care,S02,3010.01,30
+SKU005,Household Item 05,Household,S02,1409.11,40
+SKU006,Office Supplies Item 06,Office Supplies,S02,1349.01,100
+SKU007,Electronics Item 07,Electronics,S04,1623.84,50
+SKU008,Packaging Item 08,Packaging,S01,1573.52,30
+SKU009,Personal Care Item 09,Personal Care,S07,1742.4,40
+SKU010,Household Item 10,Household,S08,1574.74,80
+SKU011,Office Supplies Item 11,Office Supplies,S05,1612.28,100
+SKU012,Electronics Item 12,Electronics,S02,2455.08,80
+SKU013,Packaging Item 13,Packaging,S07,2842.8,100
+SKU014,Personal Care Item 14,Personal Care,S02,947.94,100
+SKU015,Household Item 15,Household,S02,575.03,65
+SKU016,Office Supplies Item 16,Office Supplies,S06,2972.64,100
+SKU017,Electronics Item 17,Electronics,S06,1067.26,80
+SKU018,Packaging Item 18,Packaging,S01,956.46,30
+SKU019,Personal Care Item 19,Personal Care,S04,4073.41,40
+SKU020,Household Item 20,Household,S02,176.72,50
+SKU021,Office Supplies Item 21,Office Supplies,S06,4005.93,80
+SKU022,Electronics Item 22,Electronics,S02,1175.9,80
+SKU023,Packaging Item 23,Packaging,S04,974.92,100
+SKU024,Personal Care Item 24,Personal Care,S01,2294.24,100
+SKU025,Household Item 25,Household,S02,2213.92,100
+SKU026,Office Supplies Item 26,Office Supplies,S04,4148.0,100
+SKU027,Electronics Item 27,Electronics,S05,527.34,50
+SKU028,Packaging Item 28,Packaging,S06,3237.78,100
+SKU029,Personal Care Item 29,Personal Care,S04,727.6,100
+SKU030,Household Item 30,Household,S03,665.33,50
+SKU031,Office Supplies Item 31,Office Supplies,S06,1131.78,100
+SKU032,Electronics Item 32,Electronics,S02,4088.86,65
+SKU033,Packaging Item 33,Packaging,S05,1899.97,100
+SKU034,Personal Care Item 34,Personal Care,S01,2998.24,30
+SKU035,Household Item 35,Household,S02,1109.38,100
+SKU036,Office Supplies Item 36,Office Supplies,S06,2660.85,50
+SKU037,Electronics Item 37,Electronics,S02,1532.01,30
+SKU038,Packaging Item 38,Packaging,S06,1418.32,100
+SKU039,Personal Care Item 39,Personal Care,S03,1325.97,80
+SKU040,Household Item 40,Household,S06,1933.78,65
+SKU041,Office Supplies Item 41,Office Supplies,S03,2861.41,80
+SKU042,Electronics Item 42,Electronics,S01,2151.1,100
+SKU043,Packaging Item 43,Packaging,S05,2424.06,50
+SKU044,Personal Care Item 44,Personal Care,S04,3056.91,30
+SKU045,Household Item 45,Household,S04,1353.74,30
